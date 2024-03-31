@@ -1,7 +1,7 @@
 // import Header from "./Header"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import LoginPage from "./LoginPage"
-import Home from "./Home"
+import Browse from "./Browse"
 
 const Body = () => {
     const appRouting = createBrowserRouter([
@@ -10,10 +10,11 @@ const Body = () => {
             element: <LoginPage />,
         },
         {
-            path: '/home',
-            element: <Home />,
+            path: '/browse',
+            element: <Browse />,
         }
     ])
+
     return (
         <RouterProvider router={appRouting}>
         </RouterProvider>
