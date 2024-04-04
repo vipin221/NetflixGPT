@@ -40,7 +40,7 @@ const Header = () => {
       </div>
       { user &&<div >
 
-        <button onClick={handleClick} className=" flex items-center p-1 hover:bg-[#212020] rounded-lg text-white  gap-2 " >
+        <button onClick={handleClick} className=" flex items-center p-1 rounded-lg text-white  gap-2 " >
           <img className="w-10 h-10 rounded-full border-2 border-white" src={user.photoURL} srcSet={USER_LOGO} alt="userimage" />
           <LogIn /></button>
 

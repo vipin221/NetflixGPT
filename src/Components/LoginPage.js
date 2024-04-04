@@ -28,12 +28,12 @@ const LoginPage = () => {
     if (isSignIn) {
       const msg = validateSignInform(email.current.value, password.current.value);
       setErrorMsg(msg);
-      if (errorMsg) return;
+      if (errorMsg !== null) return;
 
     } else {
       const msg = validateSignUnform(email.current.value, name.current.value, password.current.value, cPass.current.value);
       setErrorMsg(msg);
-      if (errorMsg) return;
+      if (errorMsg !== null) return;
     }
 
     if (!isSignIn) {
