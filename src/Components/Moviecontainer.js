@@ -8,7 +8,6 @@ const Moviecontainer = () => {
   const PopularMovie = movie_data?.PopularMovies;
   const TopRated = movie_data?.TopRated;
   const upComing = movie_data?.UpComing;
-  console.log(upComing);
 
   return (
     <div className='w-screen px-12 bg-black '>

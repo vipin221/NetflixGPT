@@ -2,7 +2,6 @@ import React from 'react'
 import { IMG_CDN_URL } from '../utils/constant'
 
 const MovieCard = ({poster}) => {
-    // console.log(poster);
    
     return (
         <div className='w-44 rounded-lg hover:scale-125 transition-all cursor-pointer'>
