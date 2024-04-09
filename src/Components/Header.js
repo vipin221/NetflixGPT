@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, USER_LOGO, laungauage } from "../utils/constant";
-import { setToggleGptSearch } from "../utils/useGptSlice";
-import { changeLanguage } from "../utils/useLanguageSlice";
+import { setToggleGptSearch } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSlice";
 
 
 const Header = () => {
@@ -50,10 +50,10 @@ const Header = () => {
       {user &&
       
         <div className="flex gap-4" >
-          <select className="bg-[#4e4d4d] font-semibold text-white  rounded-md px-2 " onChange={(e)=> dispatch(changeLanguage(e.target.value))} >
+          <select className="bg-[#4e4d4d] font-semibold text-white rounded-md " onChange={(e)=> dispatch(changeLanguage(e.target.value))} >
           {laungauage.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name} </option>)}
         </select>
-        <button className="bg-red-600 rounded-md bg-opacity-70 py-1 px-3  text-white" onClick={handleGptSearch}>Get Movie Suggestion</button>
+        <button className="bg-red-600 rounded-md bg-opacity-70  px-2  text-white" onClick={handleGptSearch}>Get Movie Suggestion</button>
           <button onClick={handleClick} className=" flex items-center p-1 rounded-lg text-white  gap-2 " >
             <img className="w-10 h-10 rounded-full border-2 border-white" src={user.photoURL} srcSet={USER_LOGO} alt="userimage" />
             <LogIn />

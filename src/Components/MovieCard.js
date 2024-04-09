@@ -2,9 +2,10 @@ import React from 'react'
 import { IMG_CDN_URL } from '../utils/constant'
 
 const MovieCard = ({poster}) => {
+    if(!poster) return;
    
     return (
-        <div className='w-44 rounded-lg hover:scale-125 transition-all cursor-pointer'>
+        <div className='w-44 rounded-lg hover:scale-x-125 hover:scale-110  cursor-pointer origin-top  transition-all'>
             <img className='aspect-[7/8] rounded-lg' alt='poster' src={IMG_CDN_URL + poster} />
         </div>
     )

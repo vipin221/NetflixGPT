@@ -3,7 +3,10 @@ import { addPopularMovie } from "../utils/moviesSlice";
 import { useEffect } from "react";
 import { options } from "../utils/constant";
 
+import { useSelector } from 'react-redux'
+
 const usePopularMoives = ()=>{
+    const popularMovie = useSelector(store => store.movies.PopularMovie)
     const dispatch = useDispatch();
     const getPopularMovies = async () => {
         const data = await fetch("https://api.themoviedb.org/3/movie/popular?page=1", options);
@@ -12,7 +15,7 @@ const usePopularMoives = ()=>{
     }
 
     useEffect(() => {
-        getPopularMovies();
+       !popularMovie && getPopularMovies();
     }, [])
 };
 export default usePopularMoives;

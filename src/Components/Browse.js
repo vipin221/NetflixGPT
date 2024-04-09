@@ -1,5 +1,5 @@
 import Header from './Header'
-import useNowPlayingMovies from '../hooks/seNowPlayingMovies'
+import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import VideoBanner from './VideoBanner';
 import Moviecontainer from './Moviecontainer';
 import usePopularMoives from '../hooks/usePopularMoives';
