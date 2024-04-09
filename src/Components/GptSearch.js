@@ -46,7 +46,7 @@ const GptSearch = () => {
   
   const langKey = useSelector(store => store.languages.language);
   return (
-    <div className='w-5/12 flex justify-center '>
+    <div className=' md:w-5/12 flex justify-center mt-5 '>
       <form onSubmit={(e) => e.preventDefault()} className='grid grid-flow-col w-full border rounded-lg overflow-hidden shadow-md shadow-gray-600'>
         <input type='text'
           ref={searchRef}

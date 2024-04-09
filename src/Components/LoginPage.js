@@ -72,8 +72,8 @@ const LoginPage = () => {
 
   return (
     <div className="">
-      <div className="" >
-        <img className="absolute" alt="bg"
+      <div className=" -z-10 fixed top-0 left-0 w-screen h-screen" >
+        <img className="w-full h-full object-cover"  alt="bg"
           src={BG_IMG}
         />
       </div>
@@ -82,8 +82,8 @@ const LoginPage = () => {
       </div>
       
 
-      <div className="absolute mt-20 flex w-full h-screen  justify-center items-center">
-        <div className="flex w-3/12 p-7 min-h-[60%] rounded-xl flex-col bg-opacity-90 text-white bg-black ">
+      <div className=" flex w-full h-fit md:pt-[10%] pt-[30%] px-5 justify-center items-center ">
+        <div className="flex md:w-3/12 p-7 min-h-[60%] rounded-xl flex-col bg-opacity-90 text-white bg-black ">
 
           <h1 className="text-4xl mb-16 font-bold text-white">{isSignIn ? "Sign In" : "Sign Up"}</h1>
 

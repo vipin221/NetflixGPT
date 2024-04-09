@@ -14,6 +14,7 @@ const Header = () => {
 
   const dispatch = useDispatch();
   const user = useSelector(store => store.user);
+  const isGptpage = useSelector(store => store.gptSearch.toggleGptSearch);
   const navigate = useNavigate();
   const handleClick = () => {
     signOut(auth).then(() => { }).catch((error) => {
@@ -41,19 +42,19 @@ const Header = () => {
   
 
   return (
-    <div className="absolute z-50 px-6 py-3  bg-gradient-to-b from-black  w-full flex items-center justify-between">
+    <div className=" absolute z-20 md:px-6 pt-3 bg-gradient-to-b from-black h-fit w-full flex items-center flex-col md:flex-row justify-between">
       <div>
-        <img className="w-52" src={LOGO}
+        <img className="w-32 md:w-52" src={LOGO}
           alt="logo" />
 
       </div>
       {user &&
       
-        <div className="flex gap-4" >
-          <select className="bg-[#4e4d4d] font-semibold text-white rounded-md " onChange={(e)=> dispatch(changeLanguage(e.target.value))} >
+        <div className="flex gap-1 md:gap-4 items-center" >
+          {isGptpage && <select className="bg-[#4e4d4d] font-semibold text-white rounded-md h-8 md:h-10" onChange={(e)=> dispatch(changeLanguage(e.target.value))} >
           {laungauage.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name} </option>)}
-        </select>
-        <button className="bg-red-600 rounded-md bg-opacity-70  px-2  text-white" onClick={handleGptSearch}>Get Movie Suggestion</button>
+        </select>}
+          <button className="bg-red-600 rounded-md bg-opacity-70  px-2  h-8 md:h-10 text-white" onClick={handleGptSearch}>{isGptpage ? <span>Home</span> : <span>Get Movie Suggestion</span>}</button>
           <button onClick={handleClick} className=" flex items-center p-1 rounded-lg text-white  gap-2 " >
             <img className="w-10 h-10 rounded-full border-2 border-white" src={user.photoURL} srcSet={USER_LOGO} alt="userimage" />
             <LogIn />

@@ -10,7 +10,7 @@ const VideoBanner = () => {
     const { original_title, overview ,id} = movie;
     return (
 
-        <div className='flex w-screen aspect-video justify-start items-center  relative'>
+        <div className='flex w-screen xl:aspect-video bg-black md:bg-transparent justify-start items-center pt-[25%] sm:pt-[20%] md:pt-[15%] lg:pt-[10%] xl:pt-0 '>
             <VideoBannerTitle title={original_title} overview={overview} />
             <BannerbgVideo id={id}/>
 

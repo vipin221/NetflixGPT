@@ -10,8 +10,8 @@ const Moviecontainer = () => {
   const upComing = movie_data?.UpComing;
 
   return (
-    <div className='w-screen px-12 bg-black '>
-      <div className='-my-72 relative z-40'>
+    <div className='w-screen px-2 md:px-12 bg-black '>
+      <div className='md:-my-24 lg:-my-44  xl:-my-72 relative z-40'>
         <MoivesList title={"Now Playing"} moviesList={nowPLaying} />
         <MoivesList title={"Popular"} moviesList={PopularMovie} />
         <MoivesList title={"Top Rated"} moviesList={TopRated} />
