@@ -1,5 +1,5 @@
 {
-  "homepage": "https://vipin221.github.io/NetflixGpt",
+  "homepage": "https://vipin221.github.io/NetflixGPT",
   "name": "netflix-gpt",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,6 +43,7 @@
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^2.2.2",
+    "gh-pages": "^6.1.1",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.3",
     "tailwindcss": "^3.4.1"
