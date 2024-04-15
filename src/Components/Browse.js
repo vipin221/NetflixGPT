@@ -15,6 +15,7 @@ const Browse = () => {
   usePopularMoives();
   useTopRatedMovies();
   useUpComingMovies();
+  
 
 
   return (
@@ -23,6 +24,7 @@ const Browse = () => {
       {gptsearch ?
         <GptSearchPage /> :
          <>
+
           <VideoBanner />
           <Moviecontainer />
         </>
